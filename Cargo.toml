@@ -1,0 +1,18 @@
+[package]
+name = "eth-indexer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ethers-providers = { version = "2.0", features = ["ipc"] }
+ethers-core = { version = "2.0"}
+ethers-contract = { version = "2.0"}
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+lighthouse = { git = "https://github.com/sigp/lighthouse", tag = "v4.5.0", package="eth2"}
+futures = { version = "0.3", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = "0.11"
+hex = "0.4.2"
